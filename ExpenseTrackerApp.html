@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>
+      Expense Tracker App
+    </title>
+    <meta name="viewport" content="width-device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="ExpenseTrackerApp.css">
+  </head>
+  <body>
+    <div class="full-tracker-app">
+      <div class="title-div">
+        <h1 class="title">
+          EXPENSE TRACKER APP
+        </h1>
+      </div>
+      <div>
+        <div class="input-div">
+          <div class="input-budget">
+            <h3 class="input-title">
+              Budget
+            </h3>
+            <input class="input-budget-box js-input-budget" type="text" placeholder="Enter Total Amount" >
+            <button class="setbudget-button" onclick="
+            budgetDetails();
+            ">
+              Set Budget
+            </button>
+          </div>
+          <div class="input-expenses">
+            <h3 class="input-title">
+              Expenses
+            </h3>
+            <input class="input-description-box js-input-description" type="text" placeholder="Enter the Description">
+            <input class="input-amountspent-box js-input-amount-spent" type="text" placeholder="Enter Amount">
+            <input class="input-date-box js-input-date" type="date" placeholder="Enter Date">
+            <button class="checkamount-button" onclick="
+            expenseShow();
+            chartDisplay();
+            ">
+              Check Amount
+            </button>
+          </div>
+        </div>
+        <div class="entire-output">
+          <div class="entire-output-count">
+            <div class="js-output">
+            </div>
+            <div class="js-expense-list">
+            </div>
+          </div>
+          <div class="output-chart">
+            <canvas class="js-donut-chart"
+                            width="100px"
+                            height="100px">
+                    </canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="ExpenseTrackerApp.js"></script>
+  </body>
+</html>
